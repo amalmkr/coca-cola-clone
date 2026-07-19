@@ -1,11 +1,17 @@
 import brand from "../assets/brand.svg"
+import { useState } from "react";
+import { FaBars,FaTimes,FaChevronDown } from "react-icons/fa";
 
 function Nav_cola(){
+    const [menuOpen,setMenuOpen]=useState(false);
+    const [discoverOpen,setDiscoverOpen]=useState(false);
+    const [shopOpen,setShopOpen]=useState(false);
     return(
         <>
             <nav className="bg-white p-2 text-black ">
-                <div className="text-center justify-items-center ml-20 gap-13 flex mt-6">
-               <img src={brand} className="mb-3"/>
+                <div className="hidden md:flex text-center items-center ml-20 gap-13 mt-6">
+
+                <img src={brand} className="mb-3" />
                 <span className="text-xs font-extrabold cursor-pointer border-b-4 border-transparent hover:border-black pb-2">
                     Brands
                 </span>
@@ -65,8 +71,59 @@ function Nav_cola(){
                     </div>
                 </div>
 
-                </div>        
+                </div>  
+
+                <div className="flex md:hidden justify-between items-center p-4">
+                        <img src={brand} />
+                        <button onClick={() => setMenuOpen(!menuOpen)}>
+                            {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+                        </button>
+                </div>      
            
+           {menuOpen && (
+            <div className="md:hidden flex flex-col gap-4 p-4">
+
+                <span>Brands</span>
+
+                <div>
+                    <button
+                        onClick={() => setDiscoverOpen(!discoverOpen)}
+                        className="flex justify-between w-full"
+                    >
+                        Discover
+                        <FaChevronDown />
+                    </button>
+
+                    {discoverOpen && (
+                        <div className="pl-4">
+                            <a className="block py-2">Coke Studio Bharat</a>
+                            <a className="block py-2">Sprite Joke In A Bottle</a>
+                        </div>
+                    )}
+                </div>
+
+                <span>Impact</span>
+
+                <div>
+                    <button
+                        onClick={() => setShopOpen(!shopOpen)}
+                        className="flex justify-between w-full"
+                    >
+                        Shop
+                        <FaChevronDown />
+                    </button>
+
+                    {shopOpen && (
+                        <div className="pl-4">
+                            <a className="block py-2">Amazon</a>
+                            <a className="block py-2">Blinkit</a>
+                            <a className="block py-2">Flipkart</a>
+                        </div>
+                    )}
+                </div>
+
+            </div>
+            )}
         </nav>
         </>
     )
