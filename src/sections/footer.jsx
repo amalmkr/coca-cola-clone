@@ -1,29 +1,52 @@
-import { FaFacebookF, FaInstagram, FaYoutube, FaXTwitter, FaLocationDot } from "react-icons/fa6";
-import logo from "../assets/logo-white.svg"
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaXTwitter,
+  FaLocationDot,
+} from "react-icons/fa6";
+import { FaChevronDown } from "react-icons/fa";
+import logo from "../assets/logo-white.svg";
 
 function Footer() {
   return (
     <footer className="bg-black text-white mt-20">
-      <div className="max-w-7xl mx-auto px-10 py-16">
+      <div className="max-w-7xl mx-auto px-5 md:px-10 py-16">
 
-        
-        <div className="flex justify-between items-center">
+        {/* Top */}
+        <div className="flex flex-col md:flex-row items-start md:items-center md:justify-between gap-8">
 
-          <img src={logo} className="w-60" />
+          <img src={logo} className="w-60" alt="Logo" />
 
-          <button className="border-2 border-white rounded-full px-6 py-3 flex items-center gap-3 hover:bg-white hover:text-black transition">
+          <button className="w-full md:w-auto border-2 border-white rounded-full px-6 py-3 flex items-center justify-center gap-3 hover:bg-white hover:text-black transition">
             <FaLocationDot />
             India | English
           </button>
 
         </div>
 
-        <hr className="my-10 border-gray-700"/>
+        <hr className="my-10 border-gray-700" />
 
-        
-        <div className="grid grid-cols-4 gap-16">
+        {/* Mobile Accordion Headings */}
+        <div className="md:hidden space-y-6">
 
-          <div>
+          <div className="flex justify-between items-center border-b border-gray-700 pb-5">
+            <h3 className="text-2xl font-bold">About us</h3>
+            <FaChevronDown />
+          </div>
+
+          <div className="flex justify-between items-center border-b border-gray-700 pb-5">
+            <h3 className="text-2xl font-bold">Need help?</h3>
+            <FaChevronDown />
+          </div>
+
+        </div>
+
+        {/* Links */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16 mt-8 md:mt-0">
+
+          {/* Desktop Only */}
+          <div className="hidden md:block">
             <h3 className="text-gray-400 uppercase text-sm mb-5">
               About Us
             </h3>
@@ -37,7 +60,8 @@ function Footer() {
             </ul>
           </div>
 
-          <div>
+          {/* Desktop Only */}
+          <div className="hidden md:block">
             <h3 className="text-gray-400 uppercase text-sm mb-5">
               Need Help?
             </h3>
@@ -50,7 +74,7 @@ function Footer() {
           </div>
 
           <div>
-            <ul className="space-y-4 font-semibold mt-9">
+            <ul className="space-y-4 font-semibold mt-0 md:mt-9">
               <li>Terms of Use</li>
               <li>Privacy Notice</li>
               <li>Financial & Policy Documents</li>
@@ -58,31 +82,45 @@ function Footer() {
             </ul>
           </div>
 
-            <div className="flex justify-end gap-4">
-                <div className="w-12 h-12 border border-white rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">
-                    <FaXTwitter />
-                </div>
+          <div>
+            <ul className="space-y-4 font-semibold mt-0 md:mt-9">
+              <li>Consumer Privacy Notice</li>
+              <li>Supplier Terms & Conditions - CPS</li>
+            </ul>
+          </div>
 
-                <div className="w-12 h-12 border border-white rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">
-                    <FaInstagram />
-                </div>
+        </div>
 
-                <div className="w-12 h-12 border border-white rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">
-                    <FaYoutube />
-                </div>
+        <hr className="my-10 border-gray-700" />
 
-                <div className="w-12 h-12 border border-white rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">
-                    <FaFacebookF />
-                </div>
-                </div>
+        {/* Bottom */}
+        <div className="flex flex-col md:flex-row md:justify-between items-start md:items-center gap-8">
 
+          <div className="flex justify-start gap-4">
+
+            <div className="w-12 h-12 border border-white rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">
+              <FaXTwitter />
             </div>
 
-        <hr className="my-10 border-gray-700"/>
+            <div className="w-12 h-12 border border-white rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">
+              <FaInstagram />
+            </div>
 
-        <p className="text-right text-lg">
-          © 2026 The Coca-Cola Company. All rights reserved.
-        </p>
+            <div className="w-12 h-12 border border-white rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">
+              <FaYoutube />
+            </div>
+
+            <div className="w-12 h-12 border border-white rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">
+              <FaFacebookF />
+            </div>
+
+          </div>
+
+          <p className="text-left md:text-right text-sm md:text-lg">
+            © 2026 The Coca-Cola Company. All rights reserved.
+          </p>
+
+        </div>
 
       </div>
     </footer>
