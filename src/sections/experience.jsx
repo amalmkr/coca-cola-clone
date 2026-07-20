@@ -5,7 +5,7 @@ function Experiance(){
     return(
         <>
         <section className="min-h-8/12 w-full" >
-            <h2 className="text-3xl font-['Archivo_Black'] text-black">
+            <h2 className="text-3xl font-['Archivo_Black'] text-black text-center">
             Experiences
             </h2>
             <div className="flex p-10 justify-evenly">

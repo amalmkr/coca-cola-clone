@@ -4,7 +4,7 @@ import sus2 from "../assets/sus-news-2.webp";
 function Sus() {
   return (
     <section className="py-16">
-      <h2 className="text-black font-['Archivo_Black'] text-3xl mb-12">
+      <h2 className="text-black font-['Archivo_Black'] text-3xl mb-12 text-center">
         Sustainability news
       </h2>
 
