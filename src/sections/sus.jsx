@@ -9,7 +9,7 @@ function Sus() {
       </h2>
 
       <div className="max-w-6xl mx-auto flex flex-col gap-10 md:flex-row md:gap-10">
-        <div className="bg-white rounded-2xl shadow-lg md:w-[550px] w-[450px] mx-auto overflow-hidden flex flex-col">
+        <div className="bg-white rounded-2xl shadow-lg md:w-[550px] w-[400px] mx-auto overflow-hidden flex flex-col">
           <img
             src={sus1}
             className="w-full h-72 object-cover"
@@ -36,7 +36,7 @@ function Sus() {
         </div>
 
         {/* Card 2 */}
-        <div className="bg-white rounded-2xl shadow-lg md:w-[550px] w-[450px] mx-auto overflow-hidden flex flex-col">
+        <div className="bg-white rounded-2xl shadow-lg md:w-[550px] w-[400px] mx-auto overflow-hidden flex flex-col">
           <img
             src={sus2}
             className="w-full h-72 object-cover"
