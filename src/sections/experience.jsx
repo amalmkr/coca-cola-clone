@@ -10,7 +10,7 @@ function Experiance(){
             </h2>
             <div className="flex flex-col-reverse md:flex-row md:p-1 justify-evenly">
                 <div className="md:text-left text-black md:mt-30 mt-10 text-center">
-                    <p className="font-['Archivo_Black'] text-3xl leading-tight">Coke Studio Bharat: Drink.<br/> Scan. Unlock Exclusive<br/> Music.</p>
+                    <p className="font-['Archivo_Black'] text-xl sm:text-2xl md:text-3xl leading-tight">Coke Studio Bharat: Drink.<br/> Scan. Unlock Exclusive<br/> Music.</p>
                     <button className="mt-6 border-2 px-15 text-xl rounded-4xl hover:bg-[#dddddd]">Explore Now</button>
                 </div>
                 <div className="md:w-120 mt-10">
