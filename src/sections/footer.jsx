@@ -10,7 +10,7 @@ import logo from "../assets/logo-white.svg";
 
 function Footer() {
   return (
-    <footer className="bg-black text-white mt-20">
+    <footer className="bg-black text-white ">
       <div className="max-w-7xl mx-auto px-5 md:px-10 py-16">
 
         {/* Top */}
